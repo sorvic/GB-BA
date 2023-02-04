@@ -75,6 +75,14 @@
 # out = (a < b or c < 0) and b > 5
 # print(out)
 
+# Вывод на print
+# a = 5
+# b = 3
+# c = 'hello'
+# print(a, ' - ', b, ' - ', c) # 5  -  3  -  hello
+# print(f'{a} - {b} - {c}') # 5 - 3 - hello
+# print("{} - {} - {}".format(a,b,c)) # 5 - 3 - hello
+
 # УСЛОВИЯ
 
 # room = 73
@@ -128,6 +136,7 @@
 # my_list = [10, 'qwe', 50.5, True]
 #
 # indx = 0
+# WHILE - выполняетяс до тех пор, пока верно действие
 # while indx < len(my_list):
 #     indx += 1  # indx = indx + 1
 #     print(my_list[indx])
@@ -137,6 +146,25 @@
 #
 # # for i in 'привет мир':
 # #     print(i)
+
+# в ООП нет понятия break - поэтому используют метод флага (flag)
+# n = int(input())
+# flag = True
+# i = 2
+# while flag:
+#     if n % i == 0:
+#         flag = False
+#         print(i)
+#     elif i > n // 2:
+#         print(n)
+#         flag = False
+#     i += 1
+
+# r = range(5) # 0 1 2 3 4
+# r = range(2, 5) # 2 3 4
+# r = range(0, -5) # ничего не будет выводится
+# r = range(1, 10, 2) # 1 3 5 7 9
+
 
 # for i in range(10):
 #     if i == 5:
@@ -159,32 +187,56 @@
 
 
 # РАБОТА СО СТРОКАМИ
-# text = 'съешь еще этих мягких французских булок'
+text = 'съешь еще этих мягких французских булок'
 # print(len(text))  # 39
+# print(text.lower()) # все маленькими буквами
+# print(text.upper()) # все большими буквами
+# print(text.replace('еще', 'ЕЩЕ')) # замена
 # print('еще' in text)  # True
 # print(text.isdigit())  # False
 # print(text.islower())  # True
 # print(text.replace('еще', 'ЕЩЕ'))  # съешь ЕЩЕ этих мягких французских булок
 
+# можно выводить строку поэлементно
 # for c in text:
 #     print(c)
 
 
 # СРЕЗЫ
-text = 'съешь еще этих мягких французских булок'
-print(text[0])  # с
-print(text[1])  # ъ
-print(text[len(text)-1])  # к
-# длина всегда минус один, потому что индексы начинаются с нуля!
-print(text[-5])  # б
-print(text[:])  # съешь еще этих мягких французских булок
-print(text[:2])  # съ
-print(text[len(text)-2:])  # ок
-print(text[2:9])  # ешь еще
-print(text[6:-18])  # еще этих мягких
-print(text[0:len(text):6])  # сеикакл
-print(text[::6])  # сеикакл
-text = text[2:9] + text[-5] + text[:2]  # ъ
+# text = 'съешь еще этих мягких французских булок'
+# print(text[0])  # с
+# print(text[1])  # ъ
+# print(text[len(text)-1])  # к
+# # длина всегда минус один, потому что индексы начинаются с нуля!
+# print(text[-5])  # б
+# print(text[:])  # съешь еще этих мягких французских булок
+# print(text[:2])  # съ
+# print(text[len(text)-2:])  # ок
+# print(text[2:9])  # ешь еще
+# print(text[6:-18])  # еще этих мягких
+# print(text[0:len(text):6])  # сеикакл
+# print(text[::6])  # сеикакл
+# text = text[2:9] + text[-5] + text[:2]  # ешь ещебсъ
+# print(text) # ешь ещебсъ
+
+# Ввод данных
+# ввод с новой строки
+# print('Введите первое число:')
+# a = input()
+# print(a)
+# # ввод в той же строке строки
+# b = input('Введите второе число: ')
+# print(b)
+#
+# # Приведение типов
+# c = 6.89
+# print(c)
+# c = int(c) # приводит к целочисленному типу
+# print(c)
+#
+# print(a + b) # 12
+# print(int(a) + int(b)) # 3
+
 
 
 # ПОЛУЧЕНИЕ СПРАВКИ

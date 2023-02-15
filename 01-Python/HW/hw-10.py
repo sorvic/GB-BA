@@ -17,7 +17,7 @@ k = 0
 
 num = int(input('Введите кол-во монет: '))
 
-for _ in range(num):
+for i in range(num):
     num_list.append(random.randint(0, 1))
     if num_list[i] == 0:
         n += 1

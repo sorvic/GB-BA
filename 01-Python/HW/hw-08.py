@@ -23,3 +23,15 @@ else:
 (m * n > k)
 if m * n > k and (k % n == 0 or k % m == 0):
 """
+
+
+
+# -----------------------------
+""" IrinaZurina code """
+chocolate_length = int(input('Длина шоколадки: '))
+chocolate_width = int(input('Ширина шоколадки: '))
+num_of_pieces = int(input('Количество долек: '))
+if num_of_pieces % chocolate_length == 0 or num_of_pieces % chocolate_width == 0:
+    print(f'Вы можете отломить от шоколадки {num_of_pieces} дольки/долек')
+else:
+    print(f'Вы не можете отломить от шоколадки {num_of_pieces} дольки/долек')

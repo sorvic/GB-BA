@@ -47,3 +47,29 @@ else:
 """ teacher's comment
 Можно еще добавить условие, что номер билета 6-значный.
 """
+
+
+# -----------------------------
+""" IrinaZurina code """
+ticket_num = int(input('Введите номер билета: '))
+# Блок проверки числа на шестизначность
+flag = False
+while not flag:
+    if len(str(ticket_num)) != 6:
+        flag = False
+        print('Введено неправильное число')
+        ticket_num = int(input('Введите номер билета: '))
+    else:
+        flag = True
+first_sum, second_sum = 0, 0
+for _ in range(3):
+    second_sum += ticket_num % 10
+    ticket_num //= 10
+for _ in range(3):
+    first_sum += ticket_num % 10
+    ticket_num //= 10
+
+if first_sum == second_sum:
+    print('Билет счастливый!')
+else:
+    print('Билет несчастливый...')

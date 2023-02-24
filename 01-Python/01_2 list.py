@@ -193,7 +193,7 @@ u = a.union(b) # {1, 2, 3, 5, 8, 13, 21} - объединение
 i = a.intersection(b) # {8, 2, 5} - пересечение
 di = a.difference(b) # {1, 3} - разность
 dr = b.difference(a) # {13, 21}
-q=a.union(b).difference((a.intersection(b))) # {1, 21, 3, 13}
+q = a.union(b).difference((a.intersection(b))) # {1, 21, 3, 13}
 
 bf = frozenset(a)
 print(bf) # frozenset({1, 2, 3, 5, 8}) - замороженное множество, не меняется!
